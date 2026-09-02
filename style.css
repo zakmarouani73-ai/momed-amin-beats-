@@ -1,1 +1,744 @@
+```css
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background: #080808;
+    color: #ffffff;
+    font-family: 'Inter', sans-serif;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+button,
+input,
+select {
+    font-family: inherit;
+}
+
+
+/* =========================
+   NAVBAR
+========================= */
+
+.navbar {
+    height: 85px;
+    padding: 0 7%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    border-bottom: 1px solid #1d1d1d;
+
+    position: sticky;
+    top: 0;
+    z-index: 100;
+
+    background: rgba(8, 8, 8, 0.92);
+    backdrop-filter: blur(12px);
+}
+
+.logo {
+    font-size: 22px;
+    font-weight: 900;
+    letter-spacing: -1px;
+}
+
+.logo span,
+.footer-logo span {
+    color: #777;
+}
+
+.navbar nav {
+    display: flex;
+    gap: 35px;
+}
+
+.navbar nav a {
+    font-size: 13px;
+    font-weight: 700;
+    color: #777;
+    transition: 0.3s;
+}
+
+.navbar nav a:hover,
+.navbar nav a.active {
+    color: #fff;
+}
+
+
+/* =========================
+   GENERAL
+========================= */
+
+.small-title {
+    color: #777;
+    font-size: 11px;
+    font-weight: 800;
+    letter-spacing: 3px;
+    margin-bottom: 18px;
+}
+
+h1,
+h2,
+h3 {
+    letter-spacing: -2px;
+}
+
+h1 {
+    font-size: clamp(55px, 8vw, 110px);
+    line-height: 0.9;
+}
+
+h1 span,
+h2 span {
+    color: #777;
+}
+
+.btn {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+
+    padding: 15px 25px;
+
+    font-size: 12px;
+    font-weight: 800;
+    letter-spacing: 1px;
+
+    transition: 0.3s;
+}
+
+.primary-btn {
+    background: #fff;
+    color: #000;
+}
+
+.primary-btn:hover {
+    transform: translateY(-3px);
+    background: #ddd;
+}
+
+.secondary-btn {
+    border: 1px solid #333;
+    color: #fff;
+}
+
+.secondary-btn:hover {
+    border-color: #777;
+}
+
+
+/* =========================
+   HERO
+========================= */
+
+.hero {
+    min-height: calc(100vh - 85px);
+
+    padding: 80px 7%;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    overflow: hidden;
+}
+
+.hero-content {
+    max-width: 700px;
+}
+
+.hero-text {
+    max-width: 550px;
+    margin: 35px 0;
+
+    color: #888;
+    line-height: 1.8;
+}
+
+.hero-buttons {
+    display: flex;
+    gap: 12px;
+}
+
+.hero-visual {
+    width: 400px;
+    height: 400px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.vinyl {
+    width: 340px;
+    height: 340px;
+
+    border-radius: 50%;
+
+    background:
+        repeating-radial-gradient(
+            circle,
+            #111 0px,
+            #111 8px,
+            #191919 9px,
+            #191919 11px
+        );
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    box-shadow:
+        0 0 60px rgba(255,255,255,0.06);
+
+    animation: spin 14s linear infinite;
+}
+
+.vinyl-center {
+    width: 90px;
+    height: 90px;
+
+    border-radius: 50%;
+
+    background: #080808;
+
+    border: 2px solid #333;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    font-weight: 900;
+}
+
+@keyframes spin {
+    from {
+        transform: rotate(0deg);
+    }
+
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+
+/* =========================
+   FEATURED
+========================= */
+
+.featured {
+    padding: 100px 7%;
+}
+
+.section-heading {
+    display: flex;
+    justify-content: space-between;
+    align-items: end;
+
+    margin-bottom: 45px;
+}
+
+.section-heading h2 {
+    font-size: 55px;
+}
+
+.view-all,
+.text-link {
+    font-size: 11px;
+    font-weight: 800;
+    letter-spacing: 1px;
+}
+
+.beat-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+.beat-card {
+    background: #101010;
+    border: 1px solid #1c1c1c;
+
+    transition: 0.3s;
+}
+
+.beat-card:hover {
+    transform: translateY(-6px);
+    border-color: #333;
+}
+
+.beat-cover,
+.store-cover {
+    position: relative;
+
+    aspect-ratio: 1 / 1;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+
+    padding: 20px;
+
+    overflow: hidden;
+}
+
+.cover-one {
+    background:
+        radial-gradient(circle at 30% 30%, #444, transparent 25%),
+        linear-gradient(135deg, #171717, #050505);
+}
+
+.cover-two {
+    background:
+        radial-gradient(circle at 70% 20%, #555, transparent 25%),
+        linear-gradient(45deg, #111, #292929);
+}
+
+.cover-three {
+    background:
+        radial-gradient(circle at 50% 70%, #555, transparent 20%),
+        linear-gradient(135deg, #090909, #252525);
+}
+
+.beat-cover > span,
+.store-cover > span {
+    font-size: 11px;
+    font-weight: 800;
+    color: #777;
+}
+
+.play-button {
+    position: absolute;
+
+    left: 50%;
+    top: 50%;
+
+    transform: translate(-50%, -50%);
+
+    width: 65px;
+    height: 65px;
+
+    border-radius: 50%;
+
+    border: 1px solid #444;
+
+    background: rgba(0,0,0,0.6);
+
+    color: white;
+
+    cursor: pointer;
+
+    font-size: 18px;
+
+    transition: 0.3s;
+}
+
+.play-button:hover {
+    background: white;
+    color: black;
+    transform: translate(-50%, -50%) scale(1.1);
+}
+
+.beat-info {
+    padding: 22px;
+}
+
+.beat-info h3 {
+    font-size: 21px;
+}
+
+.beat-info p {
+    color: #666;
+    font-size: 12px;
+    margin-top: 7px;
+}
+
+.beat-bottom {
+    margin-top: 22px;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.beat-bottom strong {
+    font-size: 20px;
+}
+
+.beat-bottom a {
+    font-size: 10px;
+    font-weight: 800;
+    letter-spacing: 1px;
+}
+
+
+/* =========================
+   ABOUT
+========================= */
+
+.about {
+    padding: 120px 7%;
+
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 80px;
+
+    border-top: 1px solid #1c1c1c;
+}
+
+.about-number {
+    font-size: clamp(120px, 20vw, 300px);
+    font-weight: 900;
+    color: #111;
+    line-height: 0.7;
+}
+
+.about-content h2 {
+    font-size: clamp(45px, 6vw, 80px);
+    line-height: 0.95;
+}
+
+.about-content > p:not(.small-title) {
+    color: #777;
+    line-height: 1.8;
+    margin: 30px 0;
+    max-width: 550px;
+}
+
+
+/* =========================
+   CTA
+========================= */
+
+.cta {
+    text-align: center;
+    padding: 130px 20px;
+    border-top: 1px solid #1c1c1c;
+}
+
+.cta h2 {
+    font-size: clamp(50px, 8vw, 100px);
+    line-height: 0.9;
+    margin-bottom: 40px;
+}
+
+
+/* =========================
+   STORE PAGE
+========================= */
+
+.store-header {
+    padding: 110px 7% 70px;
+}
+
+.store-header p:last-child {
+    color: #777;
+    margin-top: 25px;
+}
+
+.store {
+    padding: 20px 7% 120px;
+}
+
+.store-beat {
+    display: grid;
+    grid-template-columns: 330px 1fr;
+
+    border-top: 1px solid #222;
+
+    padding: 35px 0;
+
+    gap: 50px;
+}
+
+.store-cover {
+    aspect-ratio: 1 / 1;
+}
+
+.store-info {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.store-info h2 {
+    font-size: 45px;
+}
+
+.specs {
+    display: flex;
+    gap: 20px;
+
+    margin: 25px 0;
+
+    color: #666;
+
+    font-size: 10px;
+    font-weight: 800;
+    letter-spacing: 1px;
+}
+
+.description {
+    color: #777;
+    max-width: 600px;
+    line-height: 1.7;
+}
+
+.store-price {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+
+    margin-top: 35px;
+}
+
+.store-price strong {
+    font-size: 30px;
+}
+
+
+/* =========================
+   PAYMENT
+========================= */
+
+.payment-page {
+    min-height: calc(100vh - 85px);
+
+    padding: 100px 7%;
+
+    display: grid;
+    grid-template-columns: 1fr 450px;
+
+    gap: 100px;
+
+    align-items: center;
+}
+
+.payment-left p:last-child {
+    color: #777;
+    line-height: 1.8;
+    max-width: 500px;
+    margin-top: 30px;
+}
+
+.payment-card {
+    background: #101010;
+
+    border: 1px solid #222;
+
+    padding: 40px;
+}
+
+.payment-card h2 {
+    font-size: 35px;
+}
+
+.checkout-price {
+    font-size: 35px;
+    font-weight: 800;
+
+    margin: 15px 0 35px;
+}
+
+#orderForm {
+    display: flex;
+    flex-direction: column;
+}
+
+#orderForm label {
+    color: #777;
+
+    font-size: 10px;
+    font-weight: 800;
+    letter-spacing: 2px;
+
+    margin: 18px 0 8px;
+}
+
+#orderForm input,
+#orderForm select {
+    width: 100%;
+
+    background: #080808;
+
+    border: 1px solid #292929;
+
+    color: #fff;
+
+    padding: 15px;
+
+    outline: none;
+}
+
+#orderForm input:focus,
+#orderForm select:focus {
+    border-color: #666;
+}
+
+.checkout-button {
+    border: none;
+    cursor: pointer;
+
+    margin-top: 25px;
+}
+
+.secure-text {
+    color: #555;
+    font-size: 10px;
+    margin-top: 20px;
+    line-height: 1.6;
+}
+
+
+/* =========================
+   FOOTER
+========================= */
+
+footer {
+    border-top: 1px solid #1c1c1c;
+
+    padding: 45px 7%;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    color: #555;
+}
+
+.footer-logo {
+    font-size: 18px;
+    font-weight: 900;
+}
+
+footer p {
+    font-size: 11px;
+}
+
+.socials {
+    display: flex;
+    gap: 20px;
+}
+
+.socials a {
+    font-size: 11px;
+}
+
+.socials a:hover {
+    color: white;
+}
+
+
+/* =========================
+   RESPONSIVE
+========================= */
+
+@media (max-width: 850px) {
+
+    .navbar {
+        padding: 0 5%;
+    }
+
+    .navbar nav {
+        gap: 15px;
+    }
+
+    .hero {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 70px 5%;
+    }
+
+    .hero-visual {
+        width: 100%;
+        margin-top: 70px;
+    }
+
+    .vinyl {
+        width: 280px;
+        height: 280px;
+    }
+
+    .featured,
+    .store,
+    .store-header,
+    .about {
+        padding-left: 5%;
+        padding-right: 5%;
+    }
+
+    .beat-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .about {
+        grid-template-columns: 1fr;
+    }
+
+    .store-beat {
+        grid-template-columns: 1fr;
+    }
+
+    .store-cover {
+        max-width: 350px;
+    }
+
+    .payment-page {
+        grid-template-columns: 1fr;
+        padding: 70px 5%;
+        gap: 50px;
+    }
+
+    footer {
+        flex-direction: column;
+        gap: 20px;
+        text-align: center;
+    }
+}
+
+
+@media (max-width: 500px) {
+
+    h1 {
+        font-size: 55px;
+    }
+
+    .navbar {
+        height: 70px;
+    }
+
+    .navbar nav a {
+        font-size: 10px;
+    }
+
+    .hero-buttons {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .section-heading {
+        align-items: flex-start;
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .payment-card {
+        padding: 25px;
+    }
+}
+```
 
