@@ -1,1 +1,151 @@
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Buy Beat — Momed Amin</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<header class="navbar">
+
+    <a href="index.html" class="logo">
+        MOMED<span>AMIN</span>
+    </a>
+
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="beats.html">Beats</a>
+        <a href="payment.html" class="active">Buy</a>
+    </nav>
+
+</header>
+
+
+<main>
+
+    <section class="payment-page">
+
+        <div class="payment-left">
+
+            <p class="small-title">CHECKOUT</p>
+
+            <h1>
+                GET THE<br>
+                <span>BEAT.</span>
+            </h1>
+
+            <p>
+                Complete your order and get in contact with
+                Momed Amin to receive your beat.
+            </p>
+
+        </div>
+
+
+        <div class="payment-card">
+
+            <p class="small-title">SELECTED BEAT</p>
+
+            <h2 id="selectedBeat">
+                Beat
+            </h2>
+
+            <div class="checkout-price">
+                €<span id="selectedPrice">0</span>
+            </div>
+
+
+            <form id="orderForm">
+
+                <label>
+                    YOUR NAME
+                </label>
+
+                <input
+                    type="text"
+                    id="name"
+                    placeholder="Your name"
+                    required
+                >
+
+
+                <label>
+                    EMAIL
+                </label>
+
+                <input
+                    type="email"
+                    id="email"
+                    placeholder="your@email.com"
+                    required
+                >
+
+
+                <label>
+                    PAYMENT METHOD
+                </label>
+
+                <select id="paymentMethod" required>
+
+                    <option value="">
+                        Choose payment method
+                    </option>
+
+                    <option value="PayPal">
+                        PayPal
+                    </option>
+
+                    <option value="Bank Transfer">
+                        Bank Transfer
+                    </option>
+
+                    <option value="Other">
+                        Other / Contact Momed
+                    </option>
+
+                </select>
+
+
+                <button type="submit"
+                        class="btn primary-btn checkout-button">
+
+                    CONTINUE →
+                </button>
+
+            </form>
+
+
+            <p class="secure-text">
+                🔒 Your information is only used to process your order.
+            </p>
+
+        </div>
+
+    </section>
+
+</main>
+
+
+<footer>
+
+    <div class="footer-logo">
+        MOMED<span>AMIN</span>
+    </div>
+
+    <p>© 2026 Momed Amin. All rights reserved.</p>
+
+</footer>
+
+
+<script src="script.js"></script>
+
+</body>
+</html>
+```
 
